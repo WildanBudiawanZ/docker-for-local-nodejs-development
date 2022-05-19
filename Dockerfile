@@ -9,7 +9,8 @@ COPY ["package.json", "package-lock.json*", "./"]
 
 # install dependencies
 RUN npm i
-
+RUN npm install --global nodemon
+RUN chown -R node:node node_modules
 # copy sources
 COPY . .
 

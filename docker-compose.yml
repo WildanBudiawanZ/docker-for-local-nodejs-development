@@ -2,7 +2,7 @@ version: "3"
 
 services:
   my-app:
-    image: my-app
+    image: nodejs1013
     build: .
     environment:
       NODE_ENV: development
@@ -10,5 +10,5 @@ services:
       - 3000:3000
     command: npm run dev
     volumes:
-      # mount current dir into docker container
       - .:/my-app
+      - /my-app/node_modules
